@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: trustworthy-geo-ai
+    runtime: docker
+    plan: free
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: USER_USERNAME
+        sync: false
+      - key: USER_PASSWORD
+        sync: false
+      - key: AUTH_PEPPER
+        sync: false
+

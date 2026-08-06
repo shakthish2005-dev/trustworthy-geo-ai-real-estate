@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+tools/
+streamlit*.log
+.streamlit/secrets.toml
+data/trustestate.db
+data/trustestate.db-*
+.env
+.DS_Store
