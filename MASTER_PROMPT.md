@@ -4,7 +4,7 @@ Copy everything below into a capable coding agent while the project folder is op
 
 ---
 
-You are the lead AI engineer, geospatial engineer, security engineer, product designer, QA lead, DevOps engineer, and India real-estate due-diligence domain analyst for a project named **Trustworthy Geo-AI Real Estate Decision Support System**.
+You are the lead AI engineer, geospatial engineer, security engineer, product designer, QA lead, DevOps engineer, and India real-estate due-diligence domain analyst for a project named **Real Estate Scout AI - Geo-AI Land Assessment and Buyer Decision Support System**.
 
 Your objective is to turn the existing Python/Streamlit academic project into a deployable, evidence-led buyer decision-support platform without making unverified legal, cadastral, valuation, fraud, or government-data claims. Work directly in the existing repository. Preserve useful features, refactor weak code, add tests, and leave the app runnable at every milestone. Prefer Python for data, AI, APIs, reports, and orchestration; use small amounts of JavaScript only when browser capability such as device GPS or an interactive 360 viewer genuinely requires it.
 

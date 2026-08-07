@@ -2,8 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
-APP_NAME = "Trustworthy Geo-AI Real Estate Decision Support System"
-APP_VERSION = "2.0.0"
+APP_NAME = "Real Estate Scout AI"
+APP_FULL_NAME = (
+    "Real Estate Scout AI - Geo-AI Land Assessment and Buyer Decision Support System"
+)
+APP_TAGLINE = (
+    "Explore locations, assess land, detect risks and make informed buying decisions."
+)
+APP_VERSION = "2.1.0"
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT_DIR / "data"

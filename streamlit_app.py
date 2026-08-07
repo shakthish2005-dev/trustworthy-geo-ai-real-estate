@@ -13,6 +13,7 @@ import streamlit.components.v1 as components
 
 from trustestate.config import (
     APP_NAME,
+    APP_TAGLINE,
     APP_VERSION,
     CITY_COORDINATES,
     CITY_STATE,
@@ -118,8 +119,9 @@ def login_page(pepper: str) -> None:
     st.markdown(
         """
         <div class="hero" style="max-width:760px;margin:8vh auto 24px;">
-          <h1>🧭 Trustworthy Geo-AI</h1>
-          <p>Evidence-led property and land due diligence before you commit money.</p>
+          <h1>🧭 Real Estate Scout AI</h1>
+          <p><strong>Geo-AI Land Assessment and Buyer Decision Support System</strong><br>
+          Explore locations, assess land, detect risks and make informed buying decisions.</p>
         </div>
         """,
         unsafe_allow_html=True,
@@ -155,7 +157,7 @@ def format_inr(value: float) -> str:
 
 
 def overview_page(user: dict[str, Any]) -> None:
-    hero("Trustworthy Geo-AI", "A buyer-first workspace combining official verification routes, geo intelligence, explainable AI and evidence tracking.")
+    hero(APP_NAME, f"Geo-AI Land Assessment and Buyer Decision Support System · {APP_TAGLINE}")
     df = properties()
     stats = platform_stats()
     cols = st.columns(4)
@@ -524,7 +526,8 @@ def main() -> None:
 
     user = st.session_state.user
     with st.sidebar:
-        st.markdown("## 🧭 Trustworthy Geo-AI")
+        st.markdown(f"## 🧭 {APP_NAME}")
+        st.caption("Geo-AI Land Assessment & Buyer Decision Support")
         st.caption(f"v{APP_VERSION}")
         st.success(f"{user['username']} · {user['role']}")
         pages = [

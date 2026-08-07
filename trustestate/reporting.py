@@ -10,7 +10,7 @@ from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
-from trustestate.config import APP_NAME, DISCLAIMER
+from trustestate.config import APP_FULL_NAME, DISCLAIMER
 from trustestate.risk_engine import CHECKS
 
 
@@ -31,7 +31,7 @@ def build_due_diligence_pdf(
     styles.add(ParagraphStyle(name="CenteredTitle", parent=styles["Title"], alignment=TA_CENTER, textColor=colors.HexColor("#123047")))
     styles.add(ParagraphStyle(name="Small", parent=styles["BodyText"], fontSize=8.5, leading=11))
     story = [
-        Paragraph(APP_NAME, styles["CenteredTitle"]),
+        Paragraph(APP_FULL_NAME, styles["CenteredTitle"]),
         Paragraph("Property / Land Due-Diligence Decision Report", styles["Heading2"]),
         Spacer(1, 5 * mm),
     ]

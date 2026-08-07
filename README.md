@@ -1,4 +1,8 @@
-# Trustworthy Geo-AI Real Estate Decision Support System
+# Real Estate Scout AI
+
+## Geo-AI Land Assessment and Buyer Decision Support System
+
+**Explore locations, assess land, detect risks and make informed buying decisions.**
 
 A deployable, buyer-first third-year project for evaluating land and property before purchase. It combines an auditable due-diligence checklist, geolocation, comparable-property analysis, explainable price and listing-risk models, official verification routes, document triage, admin review, PDF reporting, and a 360-degree first-person property view.
 
@@ -65,4 +69,3 @@ The quickest public route is Streamlit Community Cloud: push this folder to a Gi
 ## Academic demonstration notice
 
 The application is decision support, not legal, surveying, engineering, environmental, lending, or valuation certification. A buyer must obtain certified records and independent professional advice before paying money or signing.
-

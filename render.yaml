@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: trustworthy-geo-ai
+    name: real-estate-scout-ai
     runtime: docker
     plan: free
     healthCheckPath: /_stcore/health
@@ -15,4 +15,3 @@ services:
         sync: false
       - key: AUTH_PEPPER
         sync: false
-
