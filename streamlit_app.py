@@ -12,8 +12,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 from trustestate.config import (
-    APP_NAME,
-    APP_TAGLINE,
     APP_VERSION,
     CITY_COORDINATES,
     CITY_STATE,
@@ -38,8 +36,14 @@ from trustestate.price_engine import predict_with_interval, train_price_model
 from trustestate.reporting import build_due_diligence_pdf
 from trustestate.risk_engine import CHECKS, evaluate_due_diligence, land_feature_score
 
+BRAND_NAME = "Real Estate Scout AI"
+BRAND_SUBTITLE = "Geo-AI Land Assessment and Buyer Decision Support System"
+BRAND_TAGLINE = (
+    "Explore locations, assess land, detect risks and make informed buying decisions."
+)
+
 st.set_page_config(
-    page_title=APP_NAME,
+    page_title=BRAND_NAME,
     page_icon="🧭",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -157,7 +161,7 @@ def format_inr(value: float) -> str:
 
 
 def overview_page(user: dict[str, Any]) -> None:
-    hero(APP_NAME, f"Geo-AI Land Assessment and Buyer Decision Support System · {APP_TAGLINE}")
+    hero(BRAND_NAME, f"{BRAND_SUBTITLE} · {BRAND_TAGLINE}")
     df = properties()
     stats = platform_stats()
     cols = st.columns(4)
@@ -526,7 +530,7 @@ def main() -> None:
 
     user = st.session_state.user
     with st.sidebar:
-        st.markdown(f"## 🧭 {APP_NAME}")
+        st.markdown(f"## 🧭 {BRAND_NAME}")
         st.caption("Geo-AI Land Assessment & Buyer Decision Support")
         st.caption(f"v{APP_VERSION}")
         st.success(f"{user['username']} · {user['role']}")
